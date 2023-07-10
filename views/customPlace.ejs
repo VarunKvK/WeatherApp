@@ -1,0 +1,68 @@
+<%- include("partials/header")-%>
+<!--Weather of Specific Place -->
+<div class="custom-container">
+  <div class="custom">
+    <h1 class="city-name"><%=CityName%></h1>
+    <p class="country-name"><%=CountryName%></p>
+    <p class="desc">Brokn Clouds</p>
+    <img src="<%=Icon%>" alt="weatherIcon" class="icon">
+    <div class="weather-condition">
+      <div class="temp">
+        <label>Temperature</label>
+        <h2 class="temperature"><%=CityTemp%>°C</h2>
+      </div>
+      <div class="pres">
+        <label>Pressure</label>
+        <h2 class="pressure"><%=CityPressure%>Pa</h2>
+      </div>
+      <div class="sea">
+        <label>Sea_Level</label>
+        <h2 class="sea_level"><%=CitySea%>m</h2>
+      </div>
+      <div class="hum">
+        <label>Humidity</label>
+        <h2 class="humidity"><%=CityHumid%>%</h2>
+      </div>
+      <div class="feel">
+        <label>Feels Like</label>
+        <h2 class="feels-like"><%=CityFeel%>°C</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Weather of Specific Place -->
+
+<!-- Every 3Hour Updating Weather -->
+<h1 class="hourly-forecast">Every 3-Hour Forecast<span>👇</span></h1>
+<%Data.forEach((data)=>{%>
+  <div class="hourly-custom">
+    <h1 class="city-time"><%=data.dt_txt.slice(10,16)%></h1>
+    <p class="hourly-desc"><%=data.weather[0].description%><s</p>
+    <img src="http://openweathermap.org/img/wn/<%=data.weather[0].icon%>.png" alt="weatherIcon" class="icon">
+    <div class="hourly-weather-condition">
+      <div class="hourly-temp">
+        <label>Temperature</label>
+        <h2 class="hourly-temperature"><%=data.main.temp%>°C</h2>
+      </div>
+      <div class="hourly-pres">
+        <label>Pressure</label>
+        <h2 class="hourly-pressure"><%=data.main.pressure%>Pa</h2>
+      </div>
+      <div class="hourly-sea">
+        <label>Sea_Level</label>
+        <h2 class="hourly-sea_level"><%=data.main.sea_level%>m</h2>
+      </div>
+      <div class="hourly-hum">
+        <label>Humidity</label>
+        <h2 class="hourly-humidity"><%=data.main.humidity%>%</h2>
+      </div>
+      <div class="hourly-feel">
+        <label>Feels Like</label>
+        <h2 class="hourly-feels-like"><%=data.main.feels_like%>°C</h2>
+      </div>
+    </div>
+  </div>
+<%})%>
+<!-- Every 3Hour Updating Weather -->
+
+<%- include("partials/footer")-%>

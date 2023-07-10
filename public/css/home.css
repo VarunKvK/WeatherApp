@@ -89,8 +89,9 @@ a {
   width: 100%;
   height: 20rem;
   background-color: #9aa0ff;
-  padding: 2rem;
-  box-shadow: 0px 3px 17px -8px rgba(0, 0, 0, 0.75);
+  padding: 2rem 2rem 2rem 2rem;
+  box-shadow: 0px 3px 17px -8px rgba(145, 101, 101, 0.75);
+  position: relative;
 }
 .weather-container .weather-desc-container .current-day-weather {
   font-size: 4rem;
@@ -99,9 +100,116 @@ a {
 }
 .weather-container .weather-desc-container .weather {
   font-size: 5rem;
-  color: #FFF;
+  color: #fff;
+  position: relative;
+  left: 0.7rem;
+}
+.weather-container .weather-desc-container h3 {
+  position: relative;
+  left: 0.7rem;
+  color: #2b2e4d;
 }
 .weather-container .weather-desc-container .weather-desc {
   font-size: 1.5rem;
   color: rgb(47, 52, 124);
+  position: relative;
+  left: 0.7rem;
+}
+.weather-container .weather-desc-container .icon {
+  position: absolute;
+  left: 10.8rem;
+  top: 7rem;
+}
+
+.custom-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom-container .custom {
+  width: 80%;
+  height: auto;
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #9aa0ff;
+  box-shadow: 0px 3px 17px -8px rgba(145, 101, 101, 0.75);
+  position: relative;
+}
+.custom-container .custom .city-name {
+  font-size: 4rem;
+  color: #4f5381;
+}
+.custom-container .custom .country-name {
+  color: #6c72af;
+  font-size: 2rem;
+}
+.custom-container .custom .icon {
+  position: absolute;
+  top: 2rem;
+  right: 10rem;
+}
+.custom-container .custom .desc {
+  position: absolute;
+  top: 3rem;
+  right: 5rem;
+  font-size: 3rem;
+  color: #848adf;
+}
+.custom-container .custom .weather-condition {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+.custom-container .custom .weather-condition div h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+.custom-container .custom .weather-condition div label {
+  color: #6e6e6e;
+}
+
+.hourly-forecast {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #4f5381;
+  margin: 2rem 0 0 8.5rem;
+}
+.hourly-forecast span {
+  font-size: 2rem;
+}
+
+.hourly-custom {
+  width: 100%;
+  height: auto;
+  margin-top: 3rem;
+  padding: 2rem 0 3rem 8.5rem;
+  background-color: #d9dbf8;
+  position: relative;
+  box-shadow: 0px 3px 17px -8px rgba(145, 101, 101, 0.75);
+}
+.hourly-custom .city-time {
+  color: #6c72af;
+  font-size: 2rem;
+}
+.hourly-custom .icon {
+  position: absolute;
+  top: -4rem;
+  left: 3rem;
+}
+.hourly-custom .hourly-desc {
+  text-transform: capitalize;
+  position: relative;
+  font-size: 3rem;
+  color: #848adf;
+}
+.hourly-custom .hourly-weather-condition {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+.hourly-custom .hourly-weather-condition div h2 {
+  font-size: 2.5rem;
+  color: #292929;
+}
+.hourly-custom .hourly-weather-condition div label {
+  color: #6e6e6e;
 }/*# sourceMappingURL=home.css.map */
